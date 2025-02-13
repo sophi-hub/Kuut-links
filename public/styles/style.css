@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2vh 2vw;
+  font: 400 1rem "Poppins", sans-serif;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  background: linear-gradient(-45deg, #f4f4f4, #3f0c9d);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+.shortener {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2vh 2vw;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #fff;
+  padding: 1.2vh 1.2vw;
+  width: 55vw;
+  height: 80vh;
+  border-radius: 2.5vw;
+  overflow: hidden;
+}
+
+.shortener__content,
+.shortener__form {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  gap: 2vh 2vw;
+  max-width: 100%;
+}
+
+.shortener__title {
+  font: 700 2.8rem "Bowlby One SC", sans-serif;
+  color: #3c0d77;
+}
+
+.shortener__input {
+  margin: 3vh 0 3vh 0;
+  width: 21vw;
+  height: 7vh;
+  font-size: 1.3rem;
+  display: block;
+  border: none;
+  padding: 1.2vh 1.2vw;
+  border-bottom: solid 1px #3c0d77;
+  transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, #3c0d77 4%);
+  background-position: -21vw 0;
+  background-size: 21vw 100%;
+  background-repeat: no-repeat;
+  color: #06011b;
+}
+.shortener__input:focus, .shortener__input:valid {
+  box-shadow: none;
+  outline: none;
+  background-position: 0 0;
+}
+.shortener__input::-webkit-input-placeholder {
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease-in-out;
+}
+.shortener__input:focus::-webkit-input-placeholder, .shortener__input:valid::-webkit-input-placeholder {
+  color: #3c0d77;
+  font-size: 1rem;
+  transform: translateY(-20px);
+  visibility: visible !important;
+}
+.shortener__input::placeholder {
+  font-size: 1.3rem;
+}
+
+.shortener__button {
+  margin-bottom: 2vh;
+  position: relative;
+  padding: 2vh 4vw;
+  font: 400 1.3rem "Bowlby One SC", sans-serif;
+  border: none;
+  border-radius: 2.5vw;
+  color: #fff;
+  background: #3c0d77;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  z-index: 1;
+  overflow: hidden;
+  transition: transform 0.3s linear;
+}
+.shortener__button:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  background-color: #3f0c9d;
+  border-radius: 5px;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+.shortener__button:hover {
+  transform: scale(1.05);
+}
+.shortener__button:hover:after {
+  left: 0;
+  width: 100%;
+}
+.shortener__button:active {
+  top: 2px;
+}
+
+.shortener__link {
+  margin: 0 1vw;
+  font-size: 1.3rem;
+}
+
+.shortener__banner img {
+  max-width: 100%;
+  max-height: 70vh;
+  height: auto;
+  object-fit: contain;
+  border-radius: 2.5vw;
+}
+
+@media only screen and (max-width: 1656px) {
+  .shortener {
+    height: 120vh;
+    flex-direction: column;
+    align-items: center;
+  }
+  .shortener__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+  .shortener__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .shortener__input,
+  .shortener__button {
+    width: 100%;
+    max-width: 90%;
+  }
+  .shortener__input {
+    background-size: 100% 100%;
+    background-position: 0 0;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

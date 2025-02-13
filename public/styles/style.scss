@@ -1,0 +1,212 @@
+$primary-color: #3c0d77;
+$primary-hover: #3f0c9d;
+$bg-color: #f4f4f4;
+$text-color: #06011b;
+$white: #fff;
+$border-radius: 2.5vw;
+$padding: 1.2vh 1.2vw;
+$gap: 2vh 2vw;
+$font-titles: "Bowlby One SC", sans-serif;
+$font-texts: "Poppins", sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: $gap;
+}
+
+@mixin flex-direction-column {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  gap: $gap;
+}
+
+body {
+  @include flex-center();
+  font: 400 1rem $font-texts;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  background: linear-gradient(-45deg, $bg-color, $primary-hover);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.shortener {
+  @include flex-center();
+  flex-wrap: wrap; 
+  justify-content: center; 
+  background-color: $white;
+  padding: $padding;
+  width: 55vw;
+  height: 80vh;
+  border-radius: $border-radius;
+  overflow: hidden; 
+}
+
+.shortener__content,
+.shortener__form {
+  @include flex-direction-column();
+  max-width: 100%;  
+}
+
+.shortener__title {
+  font: 700 2.8rem $font-titles;
+  color: $primary-color;
+}
+
+.shortener__input {
+  margin: 3vh 0 3vh 0;
+  width: 21vw;
+  height: 7vh;
+  font-size: 1.3rem;
+  display: block;
+  border: none;
+  padding: $padding;
+  border-bottom: solid 1px $primary-color;
+  transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 96%,
+    $primary-color 4%
+  );
+  background-position: -21vw 0;
+  background-size: 21vw 100%;
+  background-repeat: no-repeat;
+  color: $text-color;
+
+  &:focus,
+  &:valid {
+    box-shadow: none;
+    outline: none;
+    background-position: 0 0;
+  }
+
+  &::-webkit-input-placeholder {
+    font-family: $font-texts;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &:focus::-webkit-input-placeholder,
+  &:valid::-webkit-input-placeholder {
+    color: $primary-color;
+    font-size: 1rem;
+    transform: translateY(-20px);
+    visibility: visible !important;
+  }
+
+  &::placeholder {
+    font-size: 1.3rem;
+  }
+}
+
+.shortener__button {
+  margin-bottom: 2vh;
+  position: relative;
+  padding: 2vh 4vw;
+  font: 400 1.3rem $font-titles;
+  border: none;
+  border-radius: $border-radius;
+  color: $white;
+  background: $primary-color;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  z-index: 1;
+  overflow: hidden;
+  transition: transform 0.3s linear;
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    background-color: $primary-hover;
+    border-radius: 5px;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+      7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &:hover:after {
+    left: 0;
+    width: 100%;
+  }
+
+  &:active {
+    top: 2px;
+  }
+}
+
+.shortener__link {
+  margin: 0 1vw;
+  font-size: 1.3rem;
+}
+
+.shortener__banner img {
+  max-width: 100%; 
+  max-height: 70vh; 
+  height: auto;
+  object-fit: contain; 
+  border-radius: $border-radius;
+}
+
+@media only screen and (max-width: 1656px) {
+  .shortener {
+    height: 120vh;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .shortener__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+    width: 100%;
+  }
+
+  .shortener__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; 
+  }
+
+  .shortener__input,
+  .shortener__button {
+    width: 100%; 
+    max-width: 90%; 
+  }
+
+  .shortener__input {
+    background-size: 100% 100%; 
+    background-position: 0 0; 
+  }
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Encurtador de URLs rápido e eficiente." />
+    <title>Kuut - Encurtador de URLs</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/assets/kuut-logo-svg-roxo.svg"
+    />
+    <link rel="icon" type="image/png" href="/assets/kuut-logo-roxo.png" />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  </head>
+  <body>
+    <main>
+      <section class="shortener animate__animated animate__fadeInUp">
+        <article class="shortener__content animate__animated animate__fadeInUp">
+          <h1 class="shortener__title">
+            Kuut your URL!
+          </h1>
+          <form class="shortener__form" action="/shorten" method="POST">
+            <input
+              class="shortener__input"
+              type="url"
+              name="originalUrl"
+              required
+              placeholder="Paste your url here"
+            />
+            <button class="shortener__button" type="submit">Kuut</button>
+          </form>
+
+          <% if (shortUrl) { %>
+          <p class="shortener__link">
+            Click:
+            <a href="<%= shortUrl %>" target="_blank"><%= shortUrl %></a>
+          </p>
+          <% } %>
+        </article>
+        <figure class="shortener__banner">
+          <img
+            src="/assets/banner-kuut-links.png"
+            alt="Banner que promove o logo da Kuut links."
+          />
+        </figure>
+      </section>
+    </main>
+  </body>
+</html>
