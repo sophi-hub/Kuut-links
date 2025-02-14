@@ -33,7 +33,6 @@ Com ele, você pode:
 | **NanoID** | Geração de identificadores únicos para URLs encurtadas de forma assíncrona | 🔢💜 |
 | **Axios** | Requisições HTTP simplificadas | 🔄💜 |
 | **Nodemon** | Reinicialização automática do servidor durante o desenvolvimento | 🔄💜 |
-| **CommonJS** | Sistema de módulos para organização do código | 📦💜 |
 | **Animate.css** | Animações suaves e atraentes | 🎭💜 |
 | **Arquitetura BEM** | Organização do CSS para melhor manutenção | 🎨💜 |
 | **Arquitetura MVC** | Organização do projeto para melhor escalabilidade | 📂💜 |
