@@ -133,6 +133,7 @@ body {
 
 .shortener__link {
   margin: 0 1vw;
+  text-wrap: wrap;
   font-size: 1.3rem;
 }
 
