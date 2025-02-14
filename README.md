@@ -48,7 +48,7 @@ Com ele, você pode:
 
 🔽 Clone este repositório:
 ```bash
-git clone https://github.com/seu-usuario/Kuut.git
+git clone https://github.com/sophi-hub/Kuut-links.git
 cd Kuut
 ```
 
