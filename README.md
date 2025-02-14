@@ -48,7 +48,7 @@ Com ele, você pode:
 🔽 Clone este repositório:
 ```bash
 git clone https://github.com/sophi-hub/Kuut-links.git
-cd Kuut
+cd Kuut-links
 ```
 
 📦 Instale as dependências:
