@@ -34,7 +34,7 @@ Com ele, você pode:
 | **Axios** | Requisições HTTP simplificadas | 🔄💜 |
 | **Nodemon** | Reinicialização automática do servidor durante o desenvolvimento | 🔄💜 |
 | **Animate.css** | Animações suaves e atraentes | 🎭💜 |
-| **Arquitetura BEM** | Organização do CSS para melhor manutenção | 🎨💜 |
+| **BEM** | Organização do CSS para melhor manutenção | 🎨💜 |
 | **Arquitetura MVC** | Organização do projeto para melhor escalabilidade | 📂💜 |
 | **Acessibilidade** | UI inclusiva e otimizada para todos | ♿💜 |
 | **SEO** | Melhor posicionamento no Google | 🔍💜 |
