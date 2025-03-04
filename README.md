@@ -53,7 +53,8 @@ cd Kuut-links
 
 📦 Instale as dependências:
 ```bash
-npm install
+npm install express ejs nanoid cors axios 
+npm install --save-dev nodemon eslint prettier node-sass
 ```
 
 🚀 Execute o servidor:
