@@ -8,6 +8,13 @@
 
 ---
 
+<video width="100%" controls>
+  <source src="https://github.com/sophi-hub/Kuut-links/raw/main/public/assets/Kuut-responsivo.mp4" type="video/mp4">
+  Seu navegador não suporta vídeos embutidos.
+</video>
+
+---
+
 ## **O que é o Kuut?** 💜
 
 O **Kuut** é um **encurtador de URLs** moderno e eficiente, criado com **Node.js** e **Express**, permitindo transformar links longos em URLs curtas e fáceis de compartilhar. 🔗✨
