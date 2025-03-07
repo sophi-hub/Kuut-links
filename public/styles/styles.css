@@ -27,6 +27,7 @@ body {
     background-position: 100% 50%;
   }
 }
+
 .shortener {
   display: flex;
   justify-content: space-around;
