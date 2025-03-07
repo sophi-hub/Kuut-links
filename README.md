@@ -59,7 +59,7 @@ npm install --save-dev nodemon eslint prettier node-sass
 
 🚀 Execute o servidor:
 ```bash
-npm start
+npm run dev
 ```
 
 ## **Contribuindo para o Projeto** 🤝
